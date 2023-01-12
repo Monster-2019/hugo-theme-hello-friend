@@ -1,0 +1,18 @@
+.beian {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.beian::before {
+    margin: 0 16px;
+    display: block;
+    content: " ";
+    height: inherit;
+    line-height: 1;
+    width: 1px;
+    background-color: #fff;
+    opacity: 0.3;
+}

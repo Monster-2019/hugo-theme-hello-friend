@@ -1,7 +1,12 @@
 <footer class="footer">
   <div class="footer__inner">
     {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+      <div class="copyright copyright--user">
+        {{ $.Site.Copyright | safeHTML }}
+        {{ if $.Site.Params.Beian }}
+          <a href="https://beian.miit.gov.cn/" target="_blank" class="beian">{{ $.Site.Params.Beian }}</a>
+        {{ end }}
+      </div>
       {{ else }}
       {{ partial "logo.html" . }}
       <div class="copyright">
