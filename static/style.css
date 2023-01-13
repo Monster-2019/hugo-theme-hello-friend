@@ -16,3 +16,8 @@
     background-color: #fff;
     opacity: 0.3;
 }
+
+img {
+    display: inline-block;
+    margin: 1px;
+}
