@@ -2,3 +2,14 @@
 If you want to include any custom html just before </head>, put it in /layouts/partials/extended_head.html
 Do not put anything in this file - it's only here so that hugo won't throw an error if /layouts/partials/extended_head.html doesn't exist.
 -->
+{{ if $.Site.Params.BaiduAnalytics }}
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?{{ $.Site.Params.BaiduAnalytics }}";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+{{ end }}
