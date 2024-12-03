@@ -25,7 +25,7 @@
     {{ end }}
   </div>
 
-  {{ if $.Site.GoogleAnalytics }}
+  {{ with .Site.Config.Services.GoogleAnalytics.ID }}
   {{ template "_internal/google_analytics.html" . }}
   {{ end }}
 </body>
